@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>RithmicApi</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>6</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="RithmicApi.EmbeddedFiles.RithmicCertificate.pk12" />
+    <None Remove="RithmicApi.EmbeddedFiles.RithmicServer.xml" />
+    <EmbeddedResource Include="RithmicApi.EmbeddedFiles.RithmicCertificate.pk12" LogicalName="RithmicApi.EmbeddedFiles.RithmicCertificate.pk12" />
+    <EmbeddedResource Include="RithmicApi.EmbeddedFiles.RithmicServer.xml" LogicalName="RithmicApi.EmbeddedFiles.RithmicServer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="rapi">
+      <HintPath>..\..\LibDll\rapi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
